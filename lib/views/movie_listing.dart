@@ -24,21 +24,23 @@ class MovieListing extends StatelessWidget {
           ),
         ),
       
-        
-        Container(
-          padding:EdgeInsets.only(top: 10, bottom: 10),
-          alignment: Alignment.centerLeft,
-          child: Text(
-            'A grumpy ogres peaceful swamp is overrun by fairy-tale creatures, how will he get them out?', 
-            style: TextStyle(
-            fontSize: 15,
-            fontStyle: FontStyle.italic,
+        Row(
+          children: [
+            Expanded(
+              child: Container(
+               padding:EdgeInsets.only(top: 10, bottom: 10),
+               alignment: Alignment.centerLeft,
+               child: Text(
+                'A grumpy ogres peaceful swamp is overrun by fairy-tale creatures, how will he get them out?', 
+                 style: TextStyle(
+                 fontSize: 15,
+                 fontStyle: FontStyle.italic,
             ),
           ),
          ),
-        ]),
+        )],
         
-    );
+        )]));
     
   }
 }
