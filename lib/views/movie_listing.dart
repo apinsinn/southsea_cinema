@@ -16,13 +16,29 @@ class MovieListing extends StatelessWidget {
       ),
       drawer: const NavDrawer(),
       body: Container(
-        child: Column (children: [
-        Text('Shrek (2001) (PG)',
+        child: Column (crossAxisAlignment: CrossAxisAlignment.start,
+        children: [Text('Shrek (2001) (PG)',
           style: TextStyle(
             fontSize: 30,
             fontStyle: FontStyle.italic,
-          ))
-    ]),
+          ),
+        ),
+      
+        
+        Container(
+          padding:EdgeInsets.only(top: 10, bottom: 10),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'A grumpy ogres peaceful swamp is overrun by fairy-tale creatures, how will he get them out?', 
+            style: TextStyle(
+            fontSize: 15,
+            fontStyle: FontStyle.italic,
+            ),
+          ),
+         ),
+        ]),
+        
     ));
+    
   }
 }
