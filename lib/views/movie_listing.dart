@@ -15,7 +15,14 @@ class MovieListing extends StatelessWidget {
         elevation: 0,
       ),
       drawer: const NavDrawer(),
-      body: const SizedBox.shrink(),
-    );
+      body: Container(
+        child: Column (children: [
+        Text('Shrek (2001) (PG)',
+          style: TextStyle(
+            fontSize: 30,
+            fontStyle: FontStyle.italic,
+          ))
+    ]),
+    ));
   }
 }
