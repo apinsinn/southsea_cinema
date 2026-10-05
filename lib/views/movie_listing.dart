@@ -15,8 +15,8 @@ class MovieListing extends StatelessWidget {
         elevation: 0,
       ),
       drawer: const NavDrawer(),
-      body: Container(
-        child: Column (crossAxisAlignment: CrossAxisAlignment.start,
+      body:
+        Column (crossAxisAlignment: CrossAxisAlignment.start,
         children: [Text('Shrek (2001) (PG)',
           style: TextStyle(
             fontSize: 30,
@@ -38,7 +38,7 @@ class MovieListing extends StatelessWidget {
          ),
         ]),
         
-    ));
+    );
     
   }
 }
