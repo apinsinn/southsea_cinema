@@ -26,11 +26,14 @@ class MovieListing extends StatelessWidget {
       
         Row(
           children: [
-            Expanded(
-              child: Container(
-               padding:EdgeInsets.only(top: 10, bottom: 10),
+           Expanded(
+            child: Column( 
+              crossAxisAlignment: CrossAxisAlignment.start,
+             children:  [ 
+              Container(
+               padding: EdgeInsets.only(top: 10, bottom: 10),
                alignment: Alignment.centerLeft,
-               child: Text(
+               child:  Text(
                 'A grumpy ogres peaceful swamp is overrun by fairy-tale creatures, how will he get them out?', 
                  style: TextStyle(
                  fontSize: 15,
@@ -38,9 +41,27 @@ class MovieListing extends StatelessWidget {
             ),
           ),
          ),
-        )],
+         Padding(
+                  padding: EdgeInsets.only(top: 8.0, bottom: 12.0),
+                  child: Text('Showtime on the 13th of October at Richmond building, ',
+                      style: TextStyle(
+                        fontSize: 15,
+                         fontStyle: FontStyle.italic,
+              ),
+            ),
+        ),
+         Padding(
+
+              padding: EdgeInsets.only(top: 8.0, bottom:30.0),
+              child: Text('Select Quantities (Up to 5 in total)' ,
+              style: TextStyle(
+                fontSize: 15,
+                fontStyle: FontStyle.italic,
+              ),
+            ),
+        )])),
         
-        )]));
+        ])]));
     
   }
 }
