@@ -27,7 +27,7 @@ class _MovieListingState extends State<MovieListing> {
             padding: EdgeInsets.only(
                 top: 10.0, bottom: 12.0, left: 10.0, right: 10.0),
             child:
-                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Text(
                 'Shrek (2001) (PG)',
                 style: TextStyle(
@@ -67,7 +67,7 @@ class _MovieListingState extends State<MovieListing> {
                         padding: EdgeInsets.only(
                             top: 30.0, bottom: 10.0, left: 10.0, right: 10.0),
                         child: Text(
-                          'Select Quantities (Up to 5 in total)',
+                          'Select Quantities (Up to 6 in total)',
                           style: TextStyle(
                             fontSize: 15,
                             fontStyle: FontStyle.italic,
@@ -78,7 +78,7 @@ class _MovieListingState extends State<MovieListing> {
               ]),
               Padding(
                   padding: const EdgeInsets.only(left: 10, top: 50),
-                  child: Row(children: [
+                  child: Column(children: [
                     DropdownMenu<int>(
                       initialSelection: 0,
                       onSelected: (int? value) {
@@ -97,7 +97,7 @@ class _MovieListingState extends State<MovieListing> {
                         DropdownMenuEntry(value: 5, label: '5'),
                       ],
                     ),
-                    const SizedBox(width: 15),
+                    const SizedBox(height: 15),
                     const Text('Adult (£7.50)',
                         style: TextStyle(
                           fontSize: 15,
