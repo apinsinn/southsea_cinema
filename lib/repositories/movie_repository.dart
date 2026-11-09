@@ -10,7 +10,7 @@ class MovieRepository {
           ageRating: 'PG',
           screeningTime: '2026-10-14 19:00:00',
           ticketPrice: 10.0,
-          imageUrl: 'assets/images/spirited_away.jpg',
+          imageUrl: 'assets/images/spirited.jpg',
         ),
         Movie(
           id: '2',

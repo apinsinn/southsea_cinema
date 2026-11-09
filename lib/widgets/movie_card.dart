@@ -33,18 +33,20 @@ class MovieCard extends StatelessWidget {
                       style: const TextStyle(
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(221, 3, 29, 47),
                        ),
                      ),
                      const SizedBox(height: 8),
-                     Text('Age Rating: ${movie.ageRating}'),
+                     Text('Age Rating: ${movie.ageRating}', style: const TextStyle( color:  Color.fromARGB(255, 0, 0, 0))),
+
                      const SizedBox(height: 8),
-                     Text('Screening Time: ${movie.screeningTime}'),
+                     Text('Screening Time: ${movie.screeningTime}', style: const TextStyle( color:  Color.fromARGB(255, 0, 0, 0))),
 
                      const SizedBox(height: 8),
                      Text(
                       movie.synopsis,
                       style: const TextStyle(
-                        color: Colors.black54,
+                        color: Color.fromARGB(137, 7, 1, 1),
                        ),
                      )
                    ]
@@ -63,6 +65,7 @@ class MovieCard extends StatelessWidget {
                             style: const TextStyle(
                               fontSize: 16.0,
                               fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(221, 3, 29, 47),
                             )),
                         ElevatedButton(
                           onPressed: (){

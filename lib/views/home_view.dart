@@ -17,38 +17,20 @@ class HomeView extends StatelessWidget {
       appBar: AppBar(
         title: const Text(
           appTitle,
-          //style: cinemaHeaderStyle,
+          style: cinemaHeaderStyle,
         ),
-        //backgroundColor: cinemaSurface,
-        //iconTheme: const IconThemeData(color: cinemaBrand),
-        //elevation: 0,
+        backgroundColor: cinemaSurface,
+        iconTheme: const IconThemeData(color: cinemaBrand),
+        elevation: 0,
       ),
+      drawer: const NavDrawer(),
       body: ListView.builder(
         itemCount: movies.length,
         itemBuilder: (context, index) {
           return MovieCard(movie: movies[index]);
         },
       ), 
-      /* drawer: const NavDrawer(),
-      body: const Center(
-        child: Padding(
-          padding: EdgeInsets.all(16.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'Welcome to $appTitle',
-                style: TextStyle(
-                  color: cinemaFontWhite,
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-               /*   */),
-              ),
-            ],
-          ),
-        ),
-      ),
-    ); */
+       
     );
   }
 }
