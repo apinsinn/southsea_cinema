@@ -19,7 +19,7 @@ class MovieCard extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Image.asset(
-                          movie.image_url,
+                          movie.imageUrl,
                           width: 100,
                           height: 150,
                           fit: BoxFit.cover),
@@ -28,24 +28,29 @@ class MovieCard extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                    Text(
+                     Text(
                       movie.title,
                       style: const TextStyle(
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    const SizedBox(height: 8),
-                    Text(
+                       ),
+                     ),
+                     const SizedBox(height: 8),
+                     Text('Age Rating: ${movie.ageRating}'),
+                     const SizedBox(height: 8),
+                     Text('Screening Time: ${movie.screeningTime}'),
+
+                     const SizedBox(height: 8),
+                     Text(
                       movie.synopsis,
                       style: const TextStyle(
                         color: Colors.black54,
-                      ),
-                    )
-                  ]
-                )
-                    ),
-           const SizedBox(width: 8),
+                       ),
+                     )
+                   ]
+                 )
+                     ),
+          
             
 
                       
@@ -54,12 +59,16 @@ class MovieCard extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('£${ticketPrice.toStringAsFixed(2)}',
+                        Text('£${movie.ticketPrice.toStringAsFixed(2)}',
                             style: const TextStyle(
                               fontSize: 16.0,
                               fontWeight: FontWeight.bold,
                             )),
-                        ElevatedButton(onPressed: (){}, child: const Text('Book Now')
+                        ElevatedButton(
+                          onPressed: (){
+                            print('Booking for ${movie.title}');
+
+                        }, child: const Text('Book Now')
                       ), ]
               )
                   ],
