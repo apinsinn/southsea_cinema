@@ -7,6 +7,13 @@ class Movie {
   final double ticketPrice;
   final String imageUrl;
 
-  const Movie({ required this.id, required this.title, required this.synopsis, required this.ageRating, required this.screeningTime, required this.ticketPrice, required this.imageUrl});
+  const Movie(
+      {required this.id,
+      required this.title,
+      required this.synopsis,
+      required this.ageRating,
+      required this.screeningTime,
+      required this.ticketPrice,
+      required this.imageUrl});
   String get formattedPrice => '£${ticketPrice.toStringAsFixed(2)}';
 }

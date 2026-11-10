@@ -12,7 +12,7 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     final movieRepository = MovieRepository();
     final List<Movie> movies = movieRepository.getMovies();
-    
+
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -29,8 +29,7 @@ class HomeView extends StatelessWidget {
         itemBuilder: (context, index) {
           return MovieCard(movie: movies[index]);
         },
-      ), 
-       
+      ),
     );
   }
 }

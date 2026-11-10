@@ -8,11 +8,13 @@ void main() {
   });
 
   group('App smoke tests', () {
-    testWidgets('App loads and displays home screen', (WidgetTester tester) async {
-      await tester.pumpWidget(const SouthseaCinemaApp());
+    testWidgets(
+      'App loads and displays home screen',
+      (WidgetTester tester) async {
+        await tester.pumpWidget(const SouthseaCinemaApp());
 
-      expect(find.text('Southsea Cinema'), findsOneWidget);
-    },
+        expect(find.text('Southsea Cinema'), findsOneWidget);
+      },
     );
 
     testWidgets('Display movie cards', (WidgetTester tester) async {
@@ -26,7 +28,6 @@ void main() {
       await tester.pumpWidget(const SouthseaCinemaApp());
 
       expect(find.text('Book Now'), findsNWidgets(2));
-    }
-    );
-});
+    });
+  });
 }
