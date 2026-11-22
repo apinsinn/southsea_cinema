@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:southsea_cinema/constants.dart';
 import 'package:southsea_cinema/widgets/nav_drawer.dart';
+import 'package:southsea_cinema/models/movie.dart';
 
 class MovieListing extends StatefulWidget {
-  const MovieListing({super.key});
+  final Movie movie;
+  const MovieListing({super.key
+  , required this.movie});
 
   @override
   State<MovieListing> createState() => _MovieListingState();
@@ -29,7 +32,7 @@ class _MovieListingState extends State<MovieListing> {
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Text(
-                'Shrek (2001) (PG)',
+                widget.movie.title,
                 style: TextStyle(
                   fontSize: 30,
                   fontStyle: FontStyle.italic,
@@ -45,7 +48,7 @@ class _MovieListingState extends State<MovieListing> {
                             top: 30, bottom: 10, left: 10, right: 10),
                         alignment: Alignment.centerLeft,
                         child: Text(
-                          'A grumpy ogres peaceful swamp is overrun by fairy-tale creatures, how will he get them out?',
+                          widget.movie.synopsis,
                           style: TextStyle(
                             fontSize: 15,
                             fontStyle: FontStyle.italic,
@@ -56,7 +59,7 @@ class _MovieListingState extends State<MovieListing> {
                         padding: EdgeInsets.only(
                             top: 30.0, bottom: 12.0, left: 10.0, right: 10.0),
                         child: Text(
-                          'Showtime on the 13th of October at Richmond building, ',
+                          'Screening Time: ${widget.movie.screeningTime}',
                           style: TextStyle(
                             fontSize: 15,
                             fontStyle: FontStyle.italic,
@@ -98,7 +101,7 @@ class _MovieListingState extends State<MovieListing> {
                       ],
                     ),
                     const SizedBox(height: 15),
-                    const Text('Adult (£7.50)',
+                        Text('Adult (${widget.movie.formattedPrice})',
                         style: TextStyle(
                           fontSize: 15,
                           fontStyle: FontStyle.italic,
@@ -112,7 +115,7 @@ class _MovieListingState extends State<MovieListing> {
                               ElevatedButton(
                                 onPressed: () {
                                   setState(() => _bookingMessage =
-                                      'You have booked $_selectedQuantity adult tickets for Shrek (2001) (PG)');
+                                      'You have booked $_selectedQuantity adult tickets for ${widget.movie.title}.');
                                 },
                                 child: const Text('Add to Order'),
                               ),

@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:southsea_cinema/models/movie.dart';
 
-
 class MovieCard extends StatefulWidget {
   final Movie movie;
 
   const MovieCard({super.key, required this.movie});
 
   @override
-  State<MovieCard> createState() => _MovieCardState();}
+  State<MovieCard> createState() => _MovieCardState();
+}
 
-  class _MovieCardState extends State<MovieCard> {
-    String _bookingMessage = '';
+class _MovieCardState extends State<MovieCard> {
+  String _bookingMessage = '';
 
   @override
   Widget build(BuildContext context) {
@@ -68,18 +68,16 @@ class MovieCard extends StatefulWidget {
                             color: Color.fromARGB(221, 3, 29, 47),
                           )),
                       ElevatedButton(
-                          onPressed: () {setState(() {
-                            _bookingMessage = 'Booking for ${widget.movie.title}';
-                          });
+                          onPressed: () {
+                            setState(() {
+                              _bookingMessage =
+                                  'Booking for ${widget.movie.title}';
+                            });
                           },
                           child: const Text('Book Now')),
                     ]),
-
-                    const SizedBox(height: 8),
-
-                    Text(
-                      _bookingMessage,
-                      style: const TextStyle(fontSize:16)),
+                const SizedBox(height: 8),
+                Text(_bookingMessage, style: const TextStyle(fontSize: 16)),
               ],
             )));
   }
