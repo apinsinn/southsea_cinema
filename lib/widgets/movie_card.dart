@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:southsea_cinema/models/movie.dart';
 import 'package:southsea_cinema/views/movie_listing.dart';
+import 'package:southsea_cinema/widgets/primary_button.dart';
 
 class MovieCard extends StatefulWidget {
   final Movie movie;
@@ -67,7 +68,8 @@ class _MovieCardState extends State<MovieCard> {
                             fontWeight: FontWeight.bold,
                             color: Color.fromARGB(221, 3, 29, 47),
                           )),
-                      ElevatedButton(
+                      PrimaryButton(
+                          label: 'Book Now',
                           onPressed: () {
                             Navigator.push(context, 
                             MaterialPageRoute(builder: (context) => MovieListing(movie: widget.movie)));
@@ -75,8 +77,8 @@ class _MovieCardState extends State<MovieCard> {
   },
                                       
 
-                          child: const Text('Book Now')),
-                    ]),
+                          
+            )]),
                 //const SizedBox(height: 8),
                 //Text(_bookingMessage, style: const TextStyle(fontSize: 16)),
               ],

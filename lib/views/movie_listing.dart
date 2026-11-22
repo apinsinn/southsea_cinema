@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:southsea_cinema/constants.dart';
 import 'package:southsea_cinema/widgets/nav_drawer.dart';
 import 'package:southsea_cinema/models/movie.dart';
+import 'package:southsea_cinema/widgets/primary_button.dart';
 
 class MovieListing extends StatefulWidget {
   final Movie movie;
@@ -110,7 +111,8 @@ class _MovieListingState extends State<MovieListing> {
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              ElevatedButton(
+                              PrimaryButton(
+                                label: 'Add to Order',
                                 onPressed: () {
                                   setState(() {
                                     _bookingMessage =
@@ -121,7 +123,7 @@ class _MovieListingState extends State<MovieListing> {
                                 
                                       
                                 },
-                                child: const Text('Add to Order'),
+                                
                               ),
                               const SizedBox(height: 10),
                               Text(_bookingMessage),
