@@ -20,13 +20,11 @@ class _MovieListingState extends State<MovieListing> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text(appTitle, style: cinemaHeaderStyle),
-          backgroundColor: cinemaSurface,
-          iconTheme: const IconThemeData(color: cinemaBrand),
-          elevation: 0,
+          title: const Text(appTitle)
         ),
         drawer: const NavDrawer(),
-        body: Padding(
+        body: SingleChildScrollView(
+           child:Padding(
             padding: EdgeInsets.only(
                 top: 10.0, bottom: 12.0, left: 10.0, right: 10.0),
             child:
@@ -114,8 +112,14 @@ class _MovieListingState extends State<MovieListing> {
                             children: [
                               ElevatedButton(
                                 onPressed: () {
-                                  setState(() => _bookingMessage =
-                                      'You have booked $_selectedQuantity adult tickets for ${widget.movie.title}.');
+                                  setState(() {
+                                    _bookingMessage =
+                                        'You have added $_selectedQuantity tickets for ${widget.movie.title} to your order.';
+                                  });
+                                    
+                                        
+                                
+                                      
                                 },
                                 child: const Text('Add to Order'),
                               ),
@@ -123,6 +127,6 @@ class _MovieListingState extends State<MovieListing> {
                               Text(_bookingMessage),
                             ]))
                   ]))
-            ])));
+            ]))));
   }
 }
